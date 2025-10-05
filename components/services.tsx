@@ -1,54 +1,74 @@
+"use client";
 
-'use client'
-
-import { useEffect } from 'react'
-import Image from 'next/image'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Scissors, Zap, Sparkles, Droplets, Clock, CheckCircle } from 'lucide-react'
+import { useEffect } from "react";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Scissors,
+  Zap,
+  Sparkles,
+  Droplets,
+  Clock,
+  CheckCircle,
+} from "lucide-react";
 
 const services = [
   {
     id: 1,
-    title: 'Corte Clássico',
-    description: 'Corte tradicional personalizado com acabamento impecável',
-    price: 'R$ 45',
-    duration: '45 min',
-    image: 'https://i.pinimg.com/736x/ae/93/27/ae9327fe48befe8fd98eb68d19c684ad.jpg',
+    title: "Corte Clássico",
+    description: "Corte tradicional personalizado com acabamento impecável",
+    price: "R$ 45",
+    duration: "45 min",
+    image:
+      "https://i.pinimg.com/736x/ae/93/27/ae9327fe48befe8fd98eb68d19c684ad.jpg",
     icon: Scissors,
-    features: ['Lavagem', 'Corte personalizado', 'Finalização', 'Produtos premium']
+    features: [
+      "Lavagem",
+      "Corte personalizado",
+      "Finalização",
+      "Produtos premium",
+    ],
   },
   {
     id: 2,
-    title: 'Barba Profissional',
-    description: 'Aparar e modelar a barba com técnicas tradicionais',
-    price: 'R$ 35',
-    duration: '30 min',
-    image: 'https://zeus-barbershop.com/wp-content/uploads/2024/10/beard-trim.webp',
+    title: "Barba Profissional",
+    description: "Aparar e modelar a barba com técnicas tradicionais",
+    price: "R$ 35",
+    duration: "30 min",
+    image:
+      "https://zeus-barbershop.com/wp-content/uploads/2024/10/beard-trim.webp",
     icon: Zap,
-    features: ['Aparar', 'Modelagem', 'Hidratação', 'Óleo para barba']
+    features: ["Aparar", "Modelagem", "Hidratação", "Óleo para barba"],
   },
   {
     id: 3,
-    title: 'Estilização',
-    description: 'Styling profissional com produtos de alta qualidade',
-    price: 'R$ 55',
-    duration: '60 min',
-    image: 'https://images.squarespace-cdn.com/content/v1/667b76341ff40334e5b4fb45/2f94b2ac-ce83-4cae-a307-6edc091371c2/DSC00904+%281%29.jpg',
+    title: "Estilização",
+    description: "Styling profissional com produtos de alta qualidade",
+    price: "R$ 55",
+    duration: "60 min",
+    image:
+      "https://images.squarespace-cdn.com/content/v1/667b76341ff40334e5b4fb45/2f94b2ac-ce83-4cae-a307-6edc091371c2/DSC00904+%281%29.jpg",
     icon: Sparkles,
-    features: ['Corte', 'Styling', 'Produtos premium', 'Consultoria de estilo']
+    features: ["Corte", "Styling", "Produtos premium", "Consultoria de estilo"],
   },
   {
     id: 4,
-    title: 'Barba Completa',
-    description: 'Experiência completa com toalha quente e navalha',
-    price: 'R$ 65',
-    duration: '75 min',
-    image: 'https://www.fifthavebarbershop.com/wp-content/uploads/2022/08/royal-hot-towel-shave-with-razor.webp',
+    title: "Barba Completa",
+    description: "Experiência completa com toalha quente e navalha",
+    price: "R$ 65",
+    duration: "75 min",
+    image:
+      "https://www.fifthavebarbershop.com/wp-content/uploads/2022/08/royal-hot-towel-shave-with-razor.webp",
     icon: Droplets,
-    features: ['Toalha quente', 'Navalha tradicional', 'Hidratação', 'Massagem facial']
-  }
-]
+    features: [
+      "Toalha quente",
+      "Navalha tradicional",
+      "Hidratação",
+      "Massagem facial",
+    ],
+  },
+];
 
 export default function Services() {
   useEffect(() => {
@@ -56,24 +76,24 @@ export default function Services() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('revealed')
+            entry.target.classList.add("revealed");
           }
-        })
+        });
       },
       { threshold: 0.1 }
-    )
+    );
 
-    const scrollElements = document.querySelectorAll('.scroll-reveal')
-    scrollElements.forEach((el) => observer.observe(el))
+    const scrollElements = document.querySelectorAll(".scroll-reveal");
+    scrollElements.forEach((el) => observer.observe(el));
 
     return () => {
-      scrollElements.forEach((el) => observer.unobserve(el))
-    }
-  }, [])
+      scrollElements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
 
   const scrollToContact = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
-  }
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <section id="services" className="py-20 bg-black">
@@ -86,22 +106,30 @@ export default function Services() {
               Nossos Serviços
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <style>
+            @import
+            url('https://fonts.googleapis.com/css2?family=Limelight&family=Manrope:wght@200..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+          </style>
+          <h2
+            className="text-4xl md:text-5xl font-medium mb-6"
+            style={{ fontFamily: "'Limelight', cursive" }}
+          >
             Serviços <span className="text-primary">Premium</span>
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Oferecemos uma gama completa de serviços de barbearia com preços flexíveis e qualidade incomparável. 
-            Cada serviço é executado por profissionais experientes usando produtos de primeira linha.
+            Oferecemos uma gama completa de serviços de barbearia com preços
+            flexíveis e qualidade incomparável. Cada serviço é executado por
+            profissionais experientes usando produtos de primeira linha.
           </p>
         </div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {services.map((service, index) => {
-            const IconComponent = service.icon
+            const IconComponent = service.icon;
             return (
-              <Card 
-                key={service.id} 
+              <Card
+                key={service.id}
                 className="bg-gray-900/50 border-gray-800 hover:bg-gray-900/80 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] scroll-reveal overflow-hidden"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -143,7 +171,7 @@ export default function Services() {
                       </div>
                     ))}
                   </div>
-                  <Button 
+                  <Button
                     onClick={scrollToContact}
                     className="w-full bg-primary text-black hover:bg-primary/90"
                   >
@@ -151,7 +179,7 @@ export default function Services() {
                   </Button>
                 </CardContent>
               </Card>
-            )
+            );
           })}
         </div>
 
@@ -163,10 +191,14 @@ export default function Services() {
           <div className="bg-gray-900/30 rounded-lg p-8 backdrop-blur-sm">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <h4 className="text-xl font-bold mb-4 text-primary">Cortes Tradicionais</h4>
+                <h4 className="text-xl font-bold mb-4 text-primary">
+                  Cortes Tradicionais
+                </h4>
                 <div className="space-y-3">
                   <div className="flex justify-between items-center border-b border-gray-800 pb-2">
-                    <span className="text-gray-300">Corte clássico com lavagem</span>
+                    <span className="text-gray-300">
+                      Corte clássico com lavagem
+                    </span>
                     <span className="font-bold">R$ 45</span>
                   </div>
                   <div className="flex justify-between items-center border-b border-gray-800 pb-2">
@@ -174,7 +206,9 @@ export default function Services() {
                     <span className="font-bold">R$ 70</span>
                   </div>
                   <div className="flex justify-between items-center border-b border-gray-800 pb-2">
-                    <span className="text-gray-300">Corte infantil (até 12 anos)</span>
+                    <span className="text-gray-300">
+                      Corte infantil (até 12 anos)
+                    </span>
                     <span className="font-bold">R$ 30</span>
                   </div>
                   <div className="flex justify-between items-center">
@@ -184,7 +218,9 @@ export default function Services() {
                 </div>
               </div>
               <div>
-                <h4 className="text-xl font-bold mb-4 text-primary">Serviços Especiais</h4>
+                <h4 className="text-xl font-bold mb-4 text-primary">
+                  Serviços Especiais
+                </h4>
                 <div className="space-y-3">
                   <div className="flex justify-between items-center border-b border-gray-800 pb-2">
                     <span className="text-gray-300">Aparar barba</span>
@@ -209,5 +245,5 @@ export default function Services() {
         </div>
       </div>
     </section>
-  )
+  );
 }

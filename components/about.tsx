@@ -1,10 +1,9 @@
+"use client";
 
-'use client'
-
-import { useEffect } from 'react'
-import Image from 'next/image'
-import { Card, CardContent } from '@/components/ui/card'
-import { Scissors, Shield, Star, Clock } from 'lucide-react'
+import { useEffect } from "react";
+import Image from "next/image";
+import { Card, CardContent } from "@/components/ui/card";
+import { Scissors, Shield, Star, Clock } from "lucide-react";
 
 export default function About() {
   useEffect(() => {
@@ -12,20 +11,20 @@ export default function About() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('revealed')
+            entry.target.classList.add("revealed");
           }
-        })
+        });
       },
       { threshold: 0.1 }
-    )
+    );
 
-    const scrollElements = document.querySelectorAll('.scroll-reveal')
-    scrollElements.forEach((el) => observer.observe(el))
+    const scrollElements = document.querySelectorAll(".scroll-reveal");
+    scrollElements.forEach((el) => observer.observe(el));
 
     return () => {
-      scrollElements.forEach((el) => observer.unobserve(el))
-    }
-  }, [])
+      scrollElements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
 
   return (
     <section id="about" className="py-20 bg-gray-950/50">
@@ -38,12 +37,20 @@ export default function About() {
               Nossa História
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <style>
+            @import
+            url('https://fonts.googleapis.com/css2?family=Limelight&family=Manrope:wght@200..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+          </style>
+          <h2
+            className="text-4xl md:text-5xl font-medium mb-6"
+            style={{ fontFamily: "'Limelight', cursive" }}
+          >
             Dedicados à <span className="text-primary">Excelência</span>
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Estamos dedicados a capacitar homens a se sentirem e parecerem fantásticos. 
-            Com mais de 15 anos de experiência, somos referência em cortes masculinos e cuidados com a barba em Porto Alegre.
+            Estamos dedicados a capacitar homens a se sentirem e parecerem
+            fantásticos. Com mais de 15 anos de experiência, somos referência em
+            cortes masculinos e cuidados com a barba em Porto Alegre.
           </p>
         </div>
 
@@ -72,15 +79,19 @@ export default function About() {
           {/* Text Content */}
           <div className="scroll-reveal">
             <h3 className="text-3xl font-bold mb-6">
-              Tradição e Modernidade em <span className="text-primary">Harmonia</span>
+              Tradição e Modernidade em{" "}
+              <span className="text-primary">Harmonia</span>
             </h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Na Best Cut Barber, combinamos técnicas tradicionais de barbearia com as tendências mais modernas do mercado. 
-              Nossa equipe de barbeiros experientes está sempre atualizada com as últimas técnicas e estilos.
+              Na Best Cut Barber, combinamos técnicas tradicionais de barbearia
+              com as tendências mais modernas do mercado. Nossa equipe de
+              barbeiros experientes está sempre atualizada com as últimas
+              técnicas e estilos.
             </p>
             <p className="text-gray-300 mb-8 leading-relaxed">
-              Utilizamos apenas produtos de alta qualidade e ferramentas profissionais para garantir que cada cliente 
-              saia da nossa barbearia se sentindo confiante e com visual impecável.
+              Utilizamos apenas produtos de alta qualidade e ferramentas
+              profissionais para garantir que cada cliente saia da nossa
+              barbearia se sentindo confiante e com visual impecável.
             </p>
 
             {/* Features Grid */}
@@ -91,7 +102,9 @@ export default function About() {
                 </div>
                 <div>
                   <h4 className="font-semibold">Higiene Total</h4>
-                  <p className="text-sm text-gray-400">Esterilização completa</p>
+                  <p className="text-sm text-gray-400">
+                    Esterilização completa
+                  </p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
@@ -134,8 +147,9 @@ export default function About() {
               </div>
               <h3 className="text-xl font-bold mb-4">Artesanato</h3>
               <p className="text-gray-400">
-                Cada corte é uma obra de arte. Tratamos cada cliente de forma única, 
-                criando estilos personalizados que realçam a personalidade individual.
+                Cada corte é uma obra de arte. Tratamos cada cliente de forma
+                única, criando estilos personalizados que realçam a
+                personalidade individual.
               </p>
             </CardContent>
           </Card>
@@ -147,7 +161,7 @@ export default function About() {
               </div>
               <h3 className="text-xl font-bold mb-4">Confiança</h3>
               <p className="text-gray-400">
-                Construímos relacionamentos duradouros baseados em confiança, 
+                Construímos relacionamentos duradouros baseados em confiança,
                 qualidade e um atendimento excepcional que supera expectativas.
               </p>
             </CardContent>
@@ -160,13 +174,13 @@ export default function About() {
               </div>
               <h3 className="text-xl font-bold mb-4">Excelência</h3>
               <p className="text-gray-400">
-                Buscamos constantemente a perfeição em cada detalhe, 
-                desde o ambiente acolhedor até o resultado final impecável.
+                Buscamos constantemente a perfeição em cada detalhe, desde o
+                ambiente acolhedor até o resultado final impecável.
               </p>
             </CardContent>
           </Card>
         </div>
       </div>
     </section>
-  )
+  );
 }

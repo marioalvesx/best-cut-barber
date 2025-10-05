@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Scissors, Award, Users } from "lucide-react";
+import { Scissors, Award, Users, Calendar } from "lucide-react";
 
 export default function Hero() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -66,16 +66,10 @@ export default function Hero() {
             url('https://fonts.googleapis.com/css2?family=Limelight&family=Manrope:wght@200..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
           </style>
           <h1
-            className="text-3xl md:text-3xl lg:text-5xl font-regular mb-2 leading-tight"
+            className="text-8xl block mb-6"
             style={{ fontFamily: "'Limelight', cursive" }}
           >
-            Estúdio de Barbearia
-          </h1>
-          <h1
-            className="text-7xl text-primary block mb-6"
-            style={{ fontFamily: "'Limelight', cursive" }}
-          >
-            Best Cut
+            Best Haircut
           </h1>
 
           <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -84,38 +78,31 @@ export default function Hero() {
           </p>
         </div>
 
-        <div className="scroll-reveal flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+        <div className="scroll-reveal flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 rounded-full mt-10">
           <Button
             size="lg"
             onClick={scrollToContact}
-            className="bg-primary text-black hover:bg-primary/90 text-lg px-8 py-3"
+            className="bg-white text-black hover:bg-slate-300 text-md px-8 py-4 rounded-xl h-16"
           >
+            <Calendar className="h-4 w-4 mr-2" />
             Agendar Online
-          </Button>
-          <Button
-            variant="outline"
-            size="lg"
-            onClick={scrollToContact}
-            className="border-white text-white hover:bg-white hover:text-black text-lg px-8 py-3"
-          >
-            Ligar Agora
           </Button>
         </div>
 
         {/* Stats */}
         <div className="scroll-reveal grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
           <div className="text-center">
-            <Award className="h-8 w-8 text-primary mx-auto mb-3" />
+            <Award className="h-8 w-8 text-white mx-auto mb-3" />
             <div className="text-3xl font-bold mb-2 count-animation">15+</div>
             <p className="text-gray-400">Anos de Experiência</p>
           </div>
           <div className="text-center">
-            <Users className="h-8 w-8 text-primary mx-auto mb-3" />
+            <Users className="h-8 w-8 text-white mx-auto mb-3" />
             <div className="text-3xl font-bold mb-2 count-animation">5000+</div>
             <p className="text-gray-400">Clientes Satisfeitos</p>
           </div>
           <div className="text-center">
-            <Scissors className="h-8 w-8 text-primary mx-auto mb-3" />
+            <Scissors className="h-8 w-8 text-white mx-auto mb-3" />
             <div className="text-3xl font-bold mb-2 count-animation">800+</div>
             <p className="text-gray-400">Cortes por Mês</p>
           </div>

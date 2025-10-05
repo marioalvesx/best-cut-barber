@@ -7,6 +7,7 @@ import {
   TwitterIcon,
   FacebookIcon,
   InstagramIcon,
+  PhoneCallIcon,
   X,
 } from "lucide-react";
 import Logo from "@/assets/images/best-cut.svg";
@@ -39,9 +40,10 @@ export default function Header() {
             : "bg-transparent"
         }`}
       >
-        <div className="max-w-screen-2xl mx-auto px-4 py-5">
+        <div className="max-w-screen-[100%] mx-auto px-8 py-5">
           <div className="flex items-center justify-between h-16">
             <div className="flex justify-start items-center">
+              <PhoneCallIcon className="h-4 w-4 mr-2" />
               <span>55 51 99999-8888</span>
             </div>
             {/* Desktop Navigation */}
