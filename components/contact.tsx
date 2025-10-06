@@ -23,6 +23,7 @@ import {
   MessageCircle,
 } from "lucide-react";
 import { toast } from "sonner";
+import demoBarberContact1 from "@/assets/images/contact/demo-contact-barber-shop-background.png";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -145,7 +146,7 @@ export default function Contact() {
                 </p>
                 <div className="relative aspect-video rounded-lg overflow-hidden">
                   <Image
-                    src="https://cdn.abacus.ai/images/ed2cc519-bd22-4a4f-ad8a-a86a3b801b5b.png"
+                    src={demoBarberContact1}
                     alt="Best Cut Barber exterior"
                     fill
                     className="object-cover"

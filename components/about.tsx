@@ -2,6 +2,8 @@
 
 import { useEffect } from "react";
 import Image from "next/image";
+import demoBarberAbout1 from "@/assets/images/demo-about-1.png";
+import demoBarberAbout2 from "@/assets/images/demo-barber-home-01.jpg.webp";
 import { Card, CardContent } from "@/components/ui/card";
 import { Scissors, Shield, Star, Clock } from "lucide-react";
 
@@ -60,15 +62,18 @@ export default function About() {
           <div className="scroll-reveal space-y-6">
             <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
               <Image
-                src="https://cdn.abacus.ai/images/b860bb90-9e24-4136-84b7-9577b7858178.png"
+                src={demoBarberAbout1}
+                // src="https://cdn.abacus.ai/images/b860bb90-9e24-4136-84b7-9577b7858178.png"
                 alt="Traditional barber tools"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-500"
               />
             </div>
             <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
+              {/* src="https://thumbs.dreamstime.com/b/retro-barbershop-charm-classic-style-warm-ambiance-cozy-vintage-interior-dark-wood-leather-chairs-lighting-tools-389359004.jpg" */}
+
               <Image
-                src="https://thumbs.dreamstime.com/b/retro-barbershop-charm-classic-style-warm-ambiance-cozy-vintage-interior-dark-wood-leather-chairs-lighting-tools-389359004.jpg"
+                src={demoBarberAbout2}
                 alt="Vintage barber shop interior"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-500"

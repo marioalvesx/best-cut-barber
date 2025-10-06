@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import Logo from "@/assets/images/best-cut.svg";
 import Image from "next/image";
+import demoBarberFooter1 from "@/assets/images/footer/demo-barber-home-footer-bg.jpg.webp";
 
 export default function Footer() {
   const scrollToSection = (id: string) => {
@@ -21,10 +22,17 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-black border-t border-gray-800">
+    <footer
+      className="bg-cover bg-center"
+      style={{
+        backgroundImage: `url(${demoBarberFooter1.src || demoBarberFooter1})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <div className="max-w-6xl mx-auto px-4">
         {/* Main Footer Content */}
-        <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 ">
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-6">
@@ -64,7 +72,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div>
+          {/* <div>
             <h4 className="font-bold text-lg mb-6 text-primary">
               Links Rápidos
             </h4>
@@ -100,10 +108,10 @@ export default function Footer() {
                 Contato
               </button>
             </nav>
-          </div>
+          </div> */}
 
           {/* Services */}
-          <div>
+          {/* <div>
             <h4 className="font-bold text-lg mb-6 text-primary">Serviços</h4>
             <ul className="space-y-3">
               <li className="text-gray-300">Cortes Clássicos</li>
@@ -112,10 +120,10 @@ export default function Footer() {
               <li className="text-gray-300">Barba Completa</li>
               <li className="text-gray-300">Corte Infantil</li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Contact Info */}
-          <div>
+          <div className="md:ml-auto">
             <h4 className="font-bold text-lg mb-6 text-primary">Contato</h4>
             <div className="space-y-4">
               <div className="flex items-start gap-3">

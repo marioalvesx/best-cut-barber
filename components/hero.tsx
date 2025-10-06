@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Scissors, Award, Users, Calendar } from "lucide-react";
+import demoBarberBackground from "@/assets/images/demo-barber-home-bg.jpg.webp";
 
 export default function Hero() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -41,7 +42,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <div className="relative w-full h-full">
           <Image
-            src="https://cdn.abacus.ai/images/fbc4f161-79a1-4f58-826e-c86244351a39.png"
+            src={demoBarberBackground}
             alt="Professional barber at work"
             fill
             className="object-cover"

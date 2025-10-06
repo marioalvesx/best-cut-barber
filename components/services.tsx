@@ -12,6 +12,10 @@ import {
   Clock,
   CheckCircle,
 } from "lucide-react";
+import demoBarberServices1 from "@/assets/images/demo-barber-home-01.jpg";
+import demoBarberServices2 from "@/assets/images/demo-barber-home-04.jpg";
+import demoBarberServices8 from "@/assets/images/demo-barber-home-08.jpg";
+import demoBarberServices4 from "@/assets/images/demo-barber-home-06.jpg";
 
 const services = [
   {
@@ -20,8 +24,7 @@ const services = [
     description: "Corte tradicional personalizado com acabamento impecável",
     price: "R$ 45",
     duration: "45 min",
-    image:
-      "https://i.pinimg.com/736x/ae/93/27/ae9327fe48befe8fd98eb68d19c684ad.jpg",
+    image: demoBarberServices1,
     icon: Scissors,
     features: [
       "Lavagem",
@@ -36,8 +39,7 @@ const services = [
     description: "Aparar e modelar a barba com técnicas tradicionais",
     price: "R$ 35",
     duration: "30 min",
-    image:
-      "https://zeus-barbershop.com/wp-content/uploads/2024/10/beard-trim.webp",
+    image: demoBarberServices2,
     icon: Zap,
     features: ["Aparar", "Modelagem", "Hidratação", "Óleo para barba"],
   },
@@ -47,8 +49,7 @@ const services = [
     description: "Styling profissional com produtos de alta qualidade",
     price: "R$ 55",
     duration: "60 min",
-    image:
-      "https://images.squarespace-cdn.com/content/v1/667b76341ff40334e5b4fb45/2f94b2ac-ce83-4cae-a307-6edc091371c2/DSC00904+%281%29.jpg",
+    image: demoBarberServices8,
     icon: Sparkles,
     features: ["Corte", "Styling", "Produtos premium", "Consultoria de estilo"],
   },
@@ -58,8 +59,7 @@ const services = [
     description: "Experiência completa com toalha quente e navalha",
     price: "R$ 65",
     duration: "75 min",
-    image:
-      "https://www.fifthavebarbershop.com/wp-content/uploads/2022/08/royal-hot-towel-shave-with-razor.webp",
+    image: demoBarberServices4,
     icon: Droplets,
     features: [
       "Toalha quente",

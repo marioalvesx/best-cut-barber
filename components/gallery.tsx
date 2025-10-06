@@ -3,42 +3,48 @@
 import { useEffect } from "react";
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
-import { Scissors, Eye } from "lucide-react";
+import { Eye } from "lucide-react";
+import demoBarberGallery1 from "@/assets/images/gallery/demo-barber-gallery-01.avif";
+import demoBarberGallery2 from "@/assets/images/gallery/demo-barber-gallery-02.jpg";
+import demoBarberGallery3 from "@/assets/images/gallery/demo-barber-gallery-03.jpg";
+import demoBarberGallery4 from "@/assets/images/gallery/demo-barber-gallery-04.jpg";
+import demoBarberGallery5 from "@/assets/images/gallery/demo-barber-gallery-05.png";
+import demoBarberGallery6 from "@/assets/images/gallery/demo-barber-gallery-06.jpg";
 
 const galleryImages = [
   {
     id: 1,
-    src: "https://hips.hearstapps.com/hmg-prod/images/portrait-of-proud-barbershop-owner-in-his-shop-royalty-free-image-1746534154.pjpeg?crop=1xw:0.84335xh;center,top&resize=1200:*",
+    src: demoBarberGallery1,
     title: "Corte Moderno",
     category: "Cortes",
   },
   {
     id: 2,
-    src: "https://www.hair.com/on/demandware.static/-/Sites-hair-us-Library/default/dwec1d24ca/blog/beard-styles-refresh-header.jpg",
+    src: demoBarberGallery2,
     title: "Barba Estilizada",
     category: "Barbas",
   },
   {
     id: 3,
-    src: "https://static.vecteezy.com/system/resources/previews/068/860/285/non_2x/close-up-of-a-man-s-sleek-dark-hair-styled-in-a-classic-wavy-pompadour-showcasing-the-elegant-texture-and-clean-cut-suitable-for-hairstyles-and-male-grooming-advertisements-photo.jpg",
+    src: demoBarberGallery3,
     title: "Pompadour Clássico",
     category: "Styling",
   },
   {
     id: 4,
-    src: "https://images.squarespace-cdn.com/content/v1/6270536f27fa2a2db87d05c3/1733262575277-G3VFGFRPXWGLGKBOV79G/Fades+Hero.jpg?format=2500w",
+    src: demoBarberGallery4,
     title: "Fade Perfeito",
-    category: "Cortes",
+    category: "Fades",
   },
   {
     id: 5,
-    src: "https://cdn.abacus.ai/images/fbc4f161-79a1-4f58-826e-c86244351a39.png",
+    src: demoBarberGallery5,
     title: "Profissional em Ação",
     category: "Processo",
   },
   {
     id: 6,
-    src: "https://cdn.abacus.ai/images/b860bb90-9e24-4136-84b7-9577b7858178.png",
+    src: demoBarberGallery6,
     title: "Ferramentas Tradicionais",
     category: "Equipamentos",
   },
